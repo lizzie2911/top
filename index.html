@@ -40,9 +40,14 @@
             </figure>
 
             <h3>Übersichtskarte von der Provence...</h3>
-            <div id="map" style="width:900px;height:600px;border:1px solid gold"></div>
+            <div id="map"></div>
+            <div id="pulldown">
+                <select>
 
-            <h3>links</h3>
+                </select>
+            </div>
+
+            <h3><i class= "fa-solid fa-link"></i> links</h3>
             <ul>
                 <li><a href="https://www.france.fr/en/destination/provence/">france</a></li>
                 <li><a href="https://www.provence-info.de/">provence-info</a></li>
@@ -58,13 +63,7 @@
         </nav>
     </footer>
     <script>
-        var map = L.map('map').setView([43.5, 5.5], 13);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-        var marker = L.marker([43.5, 5.5]).addTo(map);
-        marker.bindPopup("<b>Bonjour!</b><br>Welcome to the Provence!! :)").openPopup();
+        
     </script>
 </body>
 
