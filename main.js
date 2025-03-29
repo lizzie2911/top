@@ -16,6 +16,14 @@ let stop = {
 };
 
 const STOPS = [
+    {
+        number: 16,
+        title: "Provence",
+        user: "lizzie2911",
+        lat: 43.5,
+        lng: 5.5,
+        zoom: 13,
+    },
 
 ];
 
