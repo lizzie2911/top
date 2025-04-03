@@ -50,10 +50,10 @@ const STOPS = [
     },
     {
         nr: 5,
-        title: "Rotorua",
+        title: "Puerto Escondido",
         user: "lukas6020",
-        lat: -38.14,
-        lng: 176.25,
+        lat: 15.87,
+        lng: -97.07,
         zoom: 13,
     },
     {
@@ -113,13 +113,13 @@ const STOPS = [
         lng: 11.302222,
         zoom: 11,
     },
-    {
-        nr: 13,
-        title: "Pancake rocks (Punakaiki)",
-        user: "johaschra",
-        lat: -42.114383,
-        lng: 171.327320,
-        zoom: 11,
+     {
+    nr: 13,
+    title: "Buenos Aires",
+    user: "johaschra",
+    lat: -34.603486,
+    lng: -58.381639,
+    zoom: 13,
     },
     {
         nr: 16,
@@ -147,7 +147,7 @@ const STOPS = [
     },
     {
         nr: 20,
-        title: "Lieblingsort der Webmapperin: Singapur",
+        title: "Singapur",
         user: "florentinebusch",
         lat: 1.283333,
         lng: 103.833333,
@@ -177,6 +177,7 @@ zoom: 11,
     lng: -5.9925,
     zoom: 13,
     },
+
     {
         lat: 49.577037,
         lng: 6.114122,
