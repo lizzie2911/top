@@ -210,6 +210,11 @@ nr: 29,
 // Map initialisation
 let map = L.map('map');
 
+// Maßstab
+L.control.scale({
+    imperial: false,
+}).addTo(map);
+
 // Background map defined
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
