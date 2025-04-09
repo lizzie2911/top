@@ -204,7 +204,8 @@ nr: 29,
     zoom: 13
     },
 ];
-
+console.log(STOPS[0]);
+console.log(STOPS[0].title);
 
 
 // Map initialisation
@@ -221,11 +222,14 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
+let markerGroup = L.layerGroup()
+
 // Ettapen:
 for (let i=0; i < STOPS.length; i++)  {
     //console.log(i, STOPS[i], STOPS[i].title);
     // create Marker
     let marker = L.marker([STOPS[i].lat, STOPS[i].lng]).addTo(map);
+    marker.addTo(markerGroup);
 
     // Popup defined
     marker.bindPopup(`
@@ -254,11 +258,27 @@ for (let i=0; i < STOPS.length; i++)  {
     
 }
 
+markerGroup.addTo(map);
 
 // auf Änderungen beim Pulldown reagieren
 document.querySelector("#pulldown select").onchange = function(evt) {
-    let url = `https://${evt.target.value}.github.io/nz`;
+    let url = `https://${evt.target.value}.github.io/top`;
     //console.log(evt.target.value);
     //console.log(url);
     window.location = url;
 }
+
+//Overlays definieren
+//let overlays = {
+    
+
+//}
+
+//Layercontrol
+L.control.layers({
+    "Open Topo Map":L.tileLayer.provider('OpenTopoMap').addTo(map),
+    "Esri World Imagery":L.tileLayer.provider('Esri.WorldImagery').addTo(map),
+    "OpenStreetMap Mapnik":L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map),
+}, {
+    "Etappen":markerGroup
+}).addTo(map);
